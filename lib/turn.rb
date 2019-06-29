@@ -39,8 +39,4 @@ def turn(board)
     if false
       turn(board)
     end
-  position_taken?(board, index)
-    if true
-      turn(board)
-    end
 end
