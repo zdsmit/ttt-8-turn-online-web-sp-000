@@ -35,12 +35,10 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   index
-  valid_move?(board, index)
-    if false
-      turn(board)
-    end
-  position_taken?(board, index)
-    if true
-      turn(board)
-    end
+  if valid_move?(board, index) && !position_taken?(board, index)
+    move(board, index, value="X")
+  else
+    turn(board)
+  end
+  display_board(board)
 end
